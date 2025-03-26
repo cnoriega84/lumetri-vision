@@ -1,0 +1,128 @@
+body {
+   background-color: blue;
+   overflow: hidden;
+   width: 100%;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+}
+
+/* animation */
+@keyframes anime-dvd {
+   15% { top: 83%; left: 45%; }
+   30% { top: 40%; left: calc(100% - 30vh); }
+   45% { top: 0%; left: 50%; }
+   60% { top: 60%; left: 0%; }
+   75% { top: 82%; left: 30%; }
+   90% { top: 40%; left: 82%; }
+   100% { top: 0; left: 0; }
+}
+
+img {
+   position: relative; 
+   border-radius: 50%;
+   width: 30vh;
+   height: 30vh;
+   top: 0;
+   left: 0;
+   animation: anime-dvd 20s infinite alternate-reverse linear;
+}
+
+.floating-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+h1 {
+   font-family: "Silkscreen", sans-serif;
+   font-weight: 400;
+   color: white;
+   font-size: 50px;
+   text-align: center;
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ h1::before,
+ h1::after {
+   content: attr(data-text); /* Copies the text content */
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   color: white;
+   background: transparent;
+ }
+ 
+ h1::before {
+   color: #ff0; /* Yellow */
+   z-index: -1;
+   left: 0px;
+   text-shadow: -1px 0 #ff0;
+   animation: glitch-anim 0.8s infinite alternate-reverse;
+ }
+ 
+ h1::after {
+   color: rgb(255, 0, 0); /* Purple */
+   z-index: -1;
+   left: -2px;
+   text-shadow: 1px 0 rgb(255, 0, 0);
+   animation: glitch-anim 0.8s infinite alternate;
+ }
+ 
+ @keyframes glitch-anim {
+   0% { transform: translate(0); }
+   20% { transform: translate(-2px, 2px); }
+   40% { transform: translate(2px, -2px); }
+   60% { transform: translate(-2px, 2px); }
+   80% { transform: translate(2px, -2px); }
+   100% { transform: translate(0); }
+ }
+ 
+ 
+
+h2 {
+   font-family: "Silkscreen", sans-serif;
+   font-weight: 400;
+   font-size: 30px;
+   text-align: center;
+   margin-top: 10%;
+   position: relative;
+   transition: 0.3s ease-in-out;
+ }
+ 
+ h2:hover {
+   color: cyan;
+   text-shadow: 2px 2px 0 red, -2px -2px 0 blue;
+   animation: glitch 0.5s infinite alternate;
+ }
+ 
+ @keyframes glitch {
+   0% { transform: translateX(-2px); }
+   50% { transform: translateX(2px); }
+   100% { transform: translateX(-2px); }
+ }
+ 
+ a {
+   color: white;
+ }
+
+ .links {
+   display: flex;
+   justify-content: center;
+   gap: 30px; /* Adjust as needed */
+   margin-top: -10%;
+}
+
+p{
+   font-family: "Silkscreen", sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   text-align: center;
+   margin-top: 10%;
+   position: relative;
+   transition: 0.3s ease-in-out;
+   color: white;
+}
