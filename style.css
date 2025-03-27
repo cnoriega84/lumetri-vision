@@ -126,3 +126,13 @@ p{
    transition: 0.3s ease-in-out;
    color: white;
 }
+li{
+  font-family: "Silkscreen", sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   text-align: center;
+   margin-top: 10%;
+   position: relative;
+   transition: 0.3s ease-in-out;
+   color: white;
+}
